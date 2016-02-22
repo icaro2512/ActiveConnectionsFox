@@ -23,8 +23,8 @@
         <activity android:name=".Controller.TelaOcorrenciaServicos" />
         <activity android:name=".Controller.TelaOcorrenciaServicoNewUpdate" />
         <activity android:name=".Controller.TelaOcorrenciaServicoComentarioNU" />
-        <activity android:name=".Controller.TelaClientes" />
         <activity android:name=".Controller.TelaCliente" />
+        <activity android:name=".Controller.TelaClientes" />
         <activity android:name=".Controller.TelaClienteInformacoes" />
         <activity android:name=".Controller.TelaClienteLocalizacao" />
         <activity android:name=".Controller.TelaClienteContato" />
@@ -38,9 +38,8 @@
         <activity android:name=".Controller.TelaAuxListaFuncionario" />
         <activity android:name=".Controller.TelaAuxListaContato" />
         <activity android:name=".Controller.TelaAuxEditaObs" />
-        <activity android:name=".Controller.TelaAuxEditaLogo">
-
-        </activity>
+        <activity android:name=".Controller.TelaAuxEditaLogo"></activity>
+        <activity android:name=".Controller.TelaContatos"></activity>
     </application>
 
 </manifest>

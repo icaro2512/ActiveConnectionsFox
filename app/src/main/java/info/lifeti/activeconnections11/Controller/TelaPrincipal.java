@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import info.lifeti.activeconnections11.R;
 
@@ -34,7 +33,7 @@ public class TelaPrincipal extends AppCompatActivity {
 
     public void cliente(View v) {
         final Context context = this;
-        Intent it = new Intent(context, TelaCliente.class);
+        Intent it = new Intent(context, TelaClientes.class);
         startActivity(it);
     }
 }

@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import info.lifeti.activeconnections11.R;
 
-public class TelaCliente extends AppCompatActivity {
+public class TelaContatos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_cliente);
+        setContentView(R.layout.activity_tela_contatos);
     }
 }
