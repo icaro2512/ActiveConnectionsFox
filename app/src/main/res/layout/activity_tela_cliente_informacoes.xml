@@ -11,25 +11,31 @@
     tools:context=".Controller.TelaClienteInformacoes">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/idCliente"
-            android:id="@+id/textView2"
-            android:layout_marginTop="15dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner2"
-            android:layout_weight="0.13"
-            android:layout_marginLeft="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/idCliente"
+                android:id="@+id/textView2"
+                android:layout_marginTop="15dp" />
 
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:layout_weight="0.13"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -144,39 +150,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tClientObs"
-                  android:text="Observações:"/>
+                android:text="Observações:"/>
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner3" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:layout_marginTop="-20dp"
-                android:layout_gravity="right">
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bSalvar"
-                    android:id="@+id/bClientSalvar"
-                    android:layout_gravity="left|right" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bSair"
-                    android:id="@+id/bClientSair"
-                    android:layout_gravity="right"/>
-            </LinearLayout>
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_marginTop="-20dp"
+        android:layout_gravity="right" >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bSalvar"
+            android:id="@+id/button"
+            android:layout_gravity="left|right" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bSair"
+            android:id="@+id/button2"
+            android:layout_gravity="right"
+            android:onClick="closeInfo" />
     </LinearLayout>
 
 </LinearLayout>

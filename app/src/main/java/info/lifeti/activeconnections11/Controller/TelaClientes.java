@@ -22,4 +22,7 @@ public class TelaClientes extends AppCompatActivity {
         startActivity(it);
     }
 
+    public void backToLogin(View v) {// tirei pq tem botão de voltar no android ja
+        finish();
+    }
 }

@@ -27,16 +27,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/idCliente"
-                android:id="@+id/tCLienteId"
-                android:layout_weight="0.13" />
+                android:id="@+id/tCLienteId" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/nomeCliente"
-                android:id="@+id/tClientName"
-                android:layout_weight="0.13" />
+                android:id="@+id/tClientName" />
         </LinearLayout>
 
         <Spinner
@@ -74,21 +72,23 @@
             android:text="@string/bEnds"
             android:id="@+id/bClientEnd"
             android:layout_gravity="center_horizontal"
-            android:onClick="clientInfos"/>
+            android:onClick="clientEnde"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bEmails"
             android:id="@+id/bClientEmail"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="clientEmail"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bTels"
             android:id="@+id/bClientTel"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="clientTel"/>
 
         <Button
             android:layout_width="match_parent"
@@ -111,7 +111,8 @@
             android:layout_height="wrap_content"
             android:text="@string/bSair"
             android:id="@+id/bClientSair"
-            android:layout_gravity="bottom|right"/>
+            android:layout_gravity="bottom|right"
+            android:onClick="backToClients"/>
     </LinearLayout>
 
 </LinearLayout>
