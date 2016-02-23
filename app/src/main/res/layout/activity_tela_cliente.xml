@@ -95,7 +95,8 @@
             android:layout_height="wrap_content"
             android:text="@string/bCont"
             android:id="@+id/bClientCont"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="clientCont"/>
     </LinearLayout>
 
     <LinearLayout

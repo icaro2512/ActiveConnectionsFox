@@ -40,7 +40,13 @@ public class TelaCliente extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void backToClients(View v) {// tirei pq tem botão de voltar no android ja
+    public void clientCont(View v) {
+        final Context context = this;
+        Intent it = new Intent(context, TelaClienteContato.class);
+        startActivity(it);
+    }
+
+    public void backToClients(View v) {
         finish();
     }
 }
