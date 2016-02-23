@@ -15,7 +15,7 @@ public class TelaCliente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cliente);
     }
-
+    /*
     public void clientInfos(View v) {
         final Context context = this;
         Intent it = new Intent(context, TelaClienteInformacoes.class);
@@ -26,5 +26,5 @@ public class TelaCliente extends AppCompatActivity {
         final Context context = this;
         Intent it = new Intent(context, TelaClientes.class);
         startActivity(it);
-    }
+    }*/
 }

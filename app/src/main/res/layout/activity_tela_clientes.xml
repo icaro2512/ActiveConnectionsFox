@@ -78,8 +78,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bVoltarClt"
             android:id="@+id/bVoltarClt"
-            android:layout_weight="1"
-            android:onClick="fechar"/>
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -22,8 +22,4 @@ public class TelaClientes extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void fechar(View v) {
-        //TESTE
-        this.onDestroy();
-    }
 }
