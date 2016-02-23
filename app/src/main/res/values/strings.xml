@@ -13,4 +13,12 @@
     <string name="bAdicionarClt">Adicionar</string>
     <string name="bExcluirClt">Excluir</string>
     <string name="bVoltarClt">Voltar</string>
+    <string name="idCliente">Cliente:0003</string>
+    <string name="nomeCliente">Nome:Almendra</string>
+    <string name="bInfo">Informações</string>
+    <string name="bEnds">Endereço(s)</string>
+    <string name="bEmails">Email(s)</string>
+    <string name="bTels">Telefones(s)</string>
+    <string name="bCont">Contato(s)</string>
+    <string name="bSalvar">Salvar</string>
 </resources>
