@@ -12,4 +12,5 @@ public class TelaAuxTipoOcorrencia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_aux_tipo_ocorrencia);
     }
+
 }
