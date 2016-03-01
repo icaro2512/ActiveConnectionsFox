@@ -21,4 +21,8 @@
     <string name="bTels">Telefones(s)</string>
     <string name="bCont">Contato(s)</string>
     <string name="bSalvar">Salvar</string>
+    <string name="tDtInicialOco">Defina a data inicial....</string>
+    <string name="bDtInicialOco"><![CDATA[>]]></string>
+    <string name="tDtFinalOco">Defina a data final...</string>
+    <string name="bDtFinalOco"><![CDATA[>]]></string>
 </resources>

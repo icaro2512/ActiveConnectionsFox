@@ -15,7 +15,7 @@ public class TelaClienteContato extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cliente_contato);
     }
-
+    //teste
     public void contatoEdit(View v) {
         final Context context = this;
         Intent it = new Intent(context, TelaClienteContatoTelEmail.class);
