@@ -10,6 +10,11 @@ public class Juridica {
     private String jurInscricaoMunicipal;
     private Cidade cid; //Código IBGE
     private Pessoa pes;
+    private String jurDtFundacao;
+
+    public Juridica(){
+
+    }
 
     public Integer getJurId() {
         return jurId;
@@ -73,5 +78,13 @@ public class Juridica {
 
     public void setPes(Pessoa pes) {
         this.pes = pes;
+    }
+
+    public String getJurDtFundacao() {
+        return jurDtFundacao;
+    }
+
+    public void setJurDtFundacao(String jurDtFundacao) {
+        this.jurDtFundacao = jurDtFundacao;
     }
 }

@@ -6,6 +6,8 @@ public class Estado {
     private String estUf;
     private Pais pai;
 
+    public Estado(){}
+
     public Integer getEstId() {
         return estId;
     }

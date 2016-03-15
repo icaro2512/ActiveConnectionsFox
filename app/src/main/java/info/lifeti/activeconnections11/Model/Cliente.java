@@ -8,6 +8,11 @@ public class Cliente {
     private String cliObservacoes;
     private Fisica fis;
     private Juridica jur;
+    private String cliLogo;
+
+    public Cliente(){
+
+    }
 
     public Integer getCliId() {
         return cliId;
@@ -55,5 +60,13 @@ public class Cliente {
 
     public void setJur(Juridica jur) {
         this.jur = jur;
+    }
+
+    public String getCliLogo() {
+        return cliLogo;
+    }
+
+    public void setCliLogo(String cliLogo) {
+        this.cliLogo = cliLogo;
     }
 }
