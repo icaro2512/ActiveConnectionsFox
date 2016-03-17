@@ -1,6 +1,8 @@
 package info.lifeti.activeconnections11.Model;
 
-public class Estado {
+import java.io.Serializable;
+
+public class Estado implements Serializable {
     private Integer estId;
     private String estNome;
     private String estUf;

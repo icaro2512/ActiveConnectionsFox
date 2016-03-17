@@ -1,7 +1,9 @@
 package info.lifeti.activeconnections11.Model;
 
 
-public class Juridica {
+import java.io.Serializable;
+
+public class Juridica implements Serializable {
     private Integer jurId;
     private String jurNomeFantasia;
     private String jurRazaoSocial;

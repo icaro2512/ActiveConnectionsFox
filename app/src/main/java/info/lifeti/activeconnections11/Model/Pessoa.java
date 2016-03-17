@@ -1,12 +1,15 @@
 package info.lifeti.activeconnections11.Model;
 
-public class Pessoa {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable {
     private Integer pesId;
     private String pesStatus;
     private String pesDtHrInclusao;
     private String pesDtSaida;
     private String pesDtHrVolta;
     private Usuario usu;
+    private PessoaEndereco pEnd;
 
     public Pessoa(){
     }
@@ -56,5 +59,13 @@ public class Pessoa {
 
     public void setUsu(Usuario usu) {
         this.usu = usu;
+    }
+
+    public PessoaEndereco getpEnd() {
+        return pEnd;
+    }
+
+    public void setpEnd(PessoaEndereco pEnd) {
+        this.pEnd = pEnd;
     }
 }

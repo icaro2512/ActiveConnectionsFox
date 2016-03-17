@@ -1,7 +1,9 @@
 package info.lifeti.activeconnections11.Model;
 
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
     private Integer cliId;
     private String cliRamo;
     private String cliEnquadramento;
