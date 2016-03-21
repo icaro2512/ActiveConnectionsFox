@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import info.lifeti.activeconnections11.Model.Cidade;
 import info.lifeti.activeconnections11.Model.Cliente;
@@ -19,6 +24,7 @@ public class TelaClienteInformacoes extends AppCompatActivity {
     Cliente clt;
     Context cljp;
     Integer STATUS;
+    Date data = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +47,64 @@ public class TelaClienteInformacoes extends AppCompatActivity {
         cljp = this;
     }
 
+    public void limparInfoCliente(View View)
+    {
+        limparEditText(jurNomeFantasia,jurRazaoSocial,jurCnpj,jurIE,jurIM,jurDataFund,cliRamo,jurIBGE,cliEnquad,cliObs);
+
+    }
+
+    private void limparEditText(EditText... e) {
+        int i = 0;
+        while (e.length > i) {
+            e[i].setText("");
+            i++;
+        }
+    }
+
     public void salvarInfoCliente(View View)
     {
+        if (jurNomeFantasia.length() <= 4){
+            Toast.makeText(this, "Nome Fantasia Precisa ter no minimo 5 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (jurRazaoSocial.length() <= 4){
+            Toast.makeText(this, "Razao Social Precisa ter no minimo 5 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (jurCnpj.length() != 14){
+            Toast.makeText(this, "CNPJ Precisa ter exatamente 14 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (jurIE.length() != 12){
+            Toast.makeText(this, "IE Precisa ter exatamente 12 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        String dataTexto = new String(String.valueOf(jurDataFund.getText()));
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            format.setLenient(false);
+            data = format.parse(dataTexto);
+        } catch (ParseException e) {
+            Toast.makeText(this, "Data inválida", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (cliRamo.length() <= 4){
+            Toast.makeText(this, "Ramo Precisa ter no minimo 5 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (jurIM.length() != 12){
+            Toast.makeText(this, "IM Precisa ter exatamente 12 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (jurIBGE.length() != 12){
+            Toast.makeText(this, "IBGE Precisa ter exatamente 12 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        if (cliEnquad.length() <= 4){
+            Toast.makeText(this, "Enquadramento Precisa ter no minimo 5 caracteres", Toast.LENGTH_LONG).show();
+            return ;
+        }
         clt = new Cliente();
         clt.setJur(new Juridica());
         clt.getJur().setPes(new Pessoa());
@@ -58,7 +120,7 @@ public class TelaClienteInformacoes extends AppCompatActivity {
         clt.setCliEnquadramento(cliEnquad.getText().toString());
         clt.setCliObservacoes(cliObs.getText().toString());
 
-        clt.getJur().getCid().setCidCodIbge(cliRamo.getText().toString());
+        clt.getJur().getCid().setCidCodIbge(jurIBGE.getText().toString());
 
         Intent it = new Intent(this, TelaCliente.class);
         it.putExtra("STATUS", 1);
@@ -67,7 +129,9 @@ public class TelaClienteInformacoes extends AppCompatActivity {
 
         finish();
     }
-    public void closeInfo(View v) {
+
+
+    public void bSairClientInfoSair(View v) {
 
         Intent it = new Intent(this, TelaCliente.class);
         it.putExtra("STATUS", STATUS);

@@ -53,27 +53,6 @@ public class TelaClienteLocalizacao extends AppCompatActivity {
 
         STATUS = (Integer)getIntent().getSerializableExtra("STATUS");
         statusTela(STATUS);
-        importaIdsXml();
-
-
-    }
-
-    public void statusTela(int s) {
-        switch (s) {
-            case 1:
-                CLIENTE = (Cliente)getIntent().getSerializableExtra("CLIENTE");
-                tCEndId.setText("Cadastro de Novo Cliente");
-                tCEndNomeFantasia.setText(CLIENTE.getJur().getJurNomeFantasia());
-                break;
-            default:
-                Toast.makeText(getApplicationContext(), "Switch de STATUS DEFAULT.", Toast.LENGTH_SHORT).show();
-        }
-        if (STATUS >= 1) {
-
-        }
-    }
-
-    public void importaIdsXml() {
         //Importando EditText
         etCEndCepNumero = (EditText) findViewById(R.id.etCEndCepNumero);
         etCEndRef = (EditText) findViewById(R.id.etCEndRef);
@@ -94,7 +73,27 @@ public class TelaClienteLocalizacao extends AppCompatActivity {
         bClientSalvar = (Button) findViewById(R.id.bClientSalvar);
         bClientSair = (Button) findViewById(R.id.bClientSair);
         bBuscarCep = (Button) findViewById(R.id.bBuscarCep);
+
+
+
     }
+
+    public void statusTela(int s) {
+        switch (s) {
+            case 1:
+                CLIENTE = (Cliente)getIntent().getSerializableExtra("CLIENTE");
+                tCEndId.setText("Cadastro de Novo Cliente");
+                tCEndNomeFantasia.setText(CLIENTE.getJur().getJurNomeFantasia());
+                break;
+            default:
+                Toast.makeText(getApplicationContext(), "Switch de STATUS DEFAULT.", Toast.LENGTH_SHORT).show();
+        }
+        if (STATUS >= 1) {
+
+        }
+    }
+
+
 
     public void salvarClientLocalizacao() {
         if (armazenarEndereco()) {
